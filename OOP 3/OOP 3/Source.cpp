@@ -23,4 +23,11 @@ int main() {
 	shapes[0]->PrintShape();
 	shapes[1]->PrintShape();
 	shapes[2]->PrintShape();
+
+	//Deconstructor test
+	{
+		Circle circle = Circle(Point(0, 0), 5);
+		Square square = Square(Point(0, 0), 15);
+		Rectangle rectangle = Rectangle(Point(0, 0), 9, 4);
+	}
 }

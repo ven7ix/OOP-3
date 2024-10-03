@@ -2,6 +2,7 @@
 
 #include "Shape.h"
 #include "Point.h"
+#include <iostream>
 
 class Circle : public Shape {
 	Point _center;
@@ -9,6 +10,9 @@ class Circle : public Shape {
 
 public:
 	Circle(Point center, int radius) : _center(center), _radius(radius) {}
+	~Circle() {
+		std::cout << "Deconstructor for Circle was called\n";
+	}
 
 	void Relocate(Point moveVector);
 	void ChangeScale(int scaleFactor);
